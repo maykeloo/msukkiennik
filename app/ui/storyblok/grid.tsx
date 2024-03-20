@@ -1,7 +1,7 @@
 import { StoryblokComponent, storyblokEditable } from '@storyblok/react/rsc';
 import { GridStoryblok } from '@/component-types-sb';
 
-const Grid = ({ blok }: { blok: GridStoryblok }) => {
+export const Grid = ({ blok }: { blok: GridStoryblok }) => {
   return (
     <div {...storyblokEditable(blok)}>
       {blok.columns?.map((nestedBlok) => (
@@ -10,5 +10,3 @@ const Grid = ({ blok }: { blok: GridStoryblok }) => {
     </div>
   );
 };
-
-export default Grid;

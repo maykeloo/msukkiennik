@@ -11,7 +11,7 @@ export default async function Home() {
   return <StoryblokStory story={data.story} bridgeOptions={{}} />;
 }
 
-export async function getStoryBookData() {
+async function getStoryBookData() {
   const sbParams: ISbStoriesParams = { version: 'draft' };
 
   const storyblokApi = getStoryblokApi();
