@@ -1,6 +1,13 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type {Metadata} from "next";
+import {Inter} from "next/font/google";
 import "./globals.css";
+import StoryblokProvider from "@/app/storyblok.provider";
+import {apiPlugin, storyblokInit} from "@storyblok/react/rsc";
+
+storyblokInit({
+  accessToken: "cxpZQOw5vS1RMweA36KeUgtt",
+  use: [apiPlugin],
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,13 +17,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
+    <StoryblokProvider>
       <body className={inter.className}>{children}</body>
+    </StoryblokProvider>
     </html>
   );
 }
