@@ -9,7 +9,7 @@ import { Feature } from '@/app/ui/storyblok/feature';
 import Grid from '@/app/ui/storyblok/grid';
 import Teaser from '@/app/ui/storyblok/teaser';
 import Page from '@/app/ui/storyblok/page';
-import { ButtonBase } from '@/app/ui/components/button/button';
+import { ButtonBase } from '@/app/ui/components/button';
 
 const components: SbReactComponentsMap = {
   feature: Feature,
