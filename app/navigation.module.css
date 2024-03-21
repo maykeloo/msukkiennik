@@ -1,0 +1,8 @@
+.navigation [data-orientation='vertical'] {
+  @apply flex-col gap-4;
+}
+
+.navigation [data-orientation='vertical'] li,
+.navigation [data-orientation='vertical'] a {
+  @apply w-full justify-start;
+}
