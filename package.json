@@ -8,17 +8,27 @@
     "start": "next start",
     "lint": "next lint",
     "proxy": "mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
-    "generate-sb-types": "storyblok-generate-ts source=./components.281260.json target=./component-types-sb"
+    "generate-sb-types": "storyblok pull-components --space=281260 && storyblok-generate-ts source=./components.281260.json target=./component-types-sb"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.1.4",
+    "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
     "@radix-ui/react-slot": "^1.0.2",
     "@storyblok/react": "^3.0.9",
+    "@types/mdx": "^2.0.11",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "next": "14.1.4",
+    "next-mdx-remote": "^4.4.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"
   },
