@@ -56,7 +56,7 @@ export type MultilinkStoryblok =
 export interface ButtonStoryblok {
   text?: string;
   variant: "" | "default" | "outline";
-  before: "" | "black" | "white";
+  background: "" | "white" | "black" | "none";
   link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   _uid: string;
   component: "button";
@@ -107,15 +107,6 @@ export interface GridStoryblok {
 export interface HeroStoryblok {
   markdown?: string;
   button?: (
-    | ButtonStoryblok
-    | FeatureStoryblok
-    | GridStoryblok
-    | HeroStoryblok
-    | PageStoryblok
-    | TeaserStoryblok
-    | TextWithIconStoryblok
-  )[];
-  button_2?: (
     | ButtonStoryblok
     | FeatureStoryblok
     | GridStoryblok

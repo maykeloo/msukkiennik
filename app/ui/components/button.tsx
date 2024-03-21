@@ -4,10 +4,13 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 export function ButtonBase({ blok }: { blok: ButtonStoryblok }) {
+  const background =
+    blok.background !== 'none' ? `element-background-${blok.background}` : '';
+
   const ButtonElement = () => {
     return (
       <Button
-        className={cn(`element-background-${blok.before}`)}
+        className={cn(background)}
         variant={blok.variant as ButtonProps['variant']}
       >
         {blok.text}

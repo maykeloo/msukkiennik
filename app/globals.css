@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.element-background-black {
-  position: relative;
-  border-color: black;
-}
-
 .element-background-white {
   position: relative;
   border-color: black;
 }
 
-.element-background-black::after {
+.element-background-black {
+  position: relative;
+  border-color: black;
+}
+
+.element-background-white::after {
   content: '';
   position: absolute;
   top: 8%;
@@ -25,7 +25,7 @@
   border-radius: calc(var(--radius) - 2px);
 }
 
-.element-background-white::after {
+.element-background-black::after {
   content: '';
   position: absolute;
   top: 12%;
